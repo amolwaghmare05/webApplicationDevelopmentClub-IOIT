@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 const teamMembers = [
   // Leadership
@@ -9,6 +10,7 @@ const teamMembers = [
     category: 'leadership',
     bio: 'Guiding the club with academic excellence and industry insights.',
     color: 'from-slate-600 to-slate-800',
+    image: null,
   },
   {
     id: 2,
@@ -17,6 +19,7 @@ const teamMembers = [
     category: 'leadership',
     bio: 'Leading the Web Application Development Club with vision and passion for technology.',
     color: 'from-primary-600 to-primary-800',
+    image: '/images/team/Pritam Rangari.jpg',
   },
   {
     id: 3,
@@ -25,6 +28,7 @@ const teamMembers = [
     category: 'leadership',
     bio: 'Supporting club initiatives and fostering innovation across all teams.',
     color: 'from-primary-500 to-accent-500',
+    image: '/images/team/Amol Waghmare.jpg',
   },
   
   // Event Team
@@ -35,6 +39,7 @@ const teamMembers = [
     category: 'event',
     bio: 'Orchestrating memorable tech events, workshops, and hackathons.',
     color: 'from-orange-500 to-red-400',
+    image: null,
   },
   {
     id: 5,
@@ -43,6 +48,7 @@ const teamMembers = [
     category: 'event',
     bio: 'Co-leading event planning and seamless execution.',
     color: 'from-red-500 to-orange-400',
+    image: null,
   },
   
   // Tech Team
@@ -53,6 +59,7 @@ const teamMembers = [
     category: 'tech',
     bio: 'Driving technical excellence and innovation in web development.',
     color: 'from-blue-500 to-cyan-400',
+    image: null,
   },
   {
     id: 7,
@@ -61,6 +68,7 @@ const teamMembers = [
     category: 'tech',
     bio: 'Building robust applications and mentoring developers.',
     color: 'from-cyan-500 to-blue-400',
+    image: null,
   },
   
   // Media Team
@@ -71,6 +79,7 @@ const teamMembers = [
     category: 'media',
     bio: 'Creating stunning visuals and managing digital presence.',
     color: 'from-pink-500 to-rose-400',
+    image: null,
   },
   
   // Documentation Team
@@ -81,6 +90,7 @@ const teamMembers = [
     category: 'documentation',
     bio: 'Ensuring comprehensive documentation and knowledge management.',
     color: 'from-amber-500 to-orange-400',
+    image: null,
   },
 ];
 
@@ -127,14 +137,23 @@ export default function TeamPage() {
                 className="card card-hover group"
               >
                 {/* Avatar */}
-                <div className={`h-52 bg-gradient-to-br ${member.color} relative`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <span className="text-5xl font-bold text-white">
-                        {member.name.charAt(0)}
-                      </span>
+                <div className={`h-52 bg-gradient-to-br ${member.color} relative overflow-hidden`}>
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-5xl font-bold text-white">
+                          {member.name.charAt(0)}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   {/* Category Badge */}
                   <div className="absolute top-3 left-3">
                     <span className="px-2.5 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-medium capitalize">
