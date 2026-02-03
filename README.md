@@ -5,7 +5,6 @@ A professional, high-performance website for the Web Application Development Clu
 ## 🚀 Live Demo
 
 - **Frontend**: [wad-club-ioit.vercel.app](https://wad-club-ioit.vercel.app)
-- **Backend API**: [wad-club-api.onrender.com](https://wad-club-api.onrender.com)
 
 ## ✨ Features
 
@@ -125,8 +124,8 @@ wad-club-website/
 - **Vice-President**: Amol Waghmare
 
 ### Team Heads
-- **Event Head**: Sahil Ghate
-- **Jt. Event Head**: Prathmesh Bagbande
+- **Event Head**: Prathmesh Bagbande
+- **Jt. Event Head**: Sahil Ghate 
 - **Tech Head**: Sarthak Deochake
 - **Jt. Tech Head**: Yash Inamdar
 - **Media Head**: Prathmesh Dawkar
@@ -299,9 +298,9 @@ Push changes to GitHub. Vercel and Render will auto-deploy from the `main` branc
 
 ---
 
-Made with ❤️ by **Pritam Rangari** for WAD Club, AISSMS IOIT Pune
+Made by **Pritam Rangari** for WAD Club, AISSMS IOIT Pune.
 7. Click "Create Web Service"
 
 ---
 
-Built with ❤️ by Pritam Rangari
+Built by Pritam Rangari
