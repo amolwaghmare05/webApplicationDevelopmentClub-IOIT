@@ -116,21 +116,6 @@ wad-club-website/
 - **Join** (`/join`) - Membership application form
 - **Gallery** (`/gallery`) - Photo gallery
 
-## 👥 Team
-
-### Leadership
-- **Advisor**: Ganesh Shejul
-- **President**: Pritam Rangari
-- **Vice-President**: Amol Waghmare
-
-### Team Heads
-- **Event Head**: Prathmesh Bagbande
-- **Jt. Event Head**: Sahil Ghate 
-- **Tech Head**: Sarthak Deochake
-- **Jt. Tech Head**: Yash Inamdar
-- **Media Head**: Prathmesh Dawkar
-- **Doc Head**: Sandesh Shinde
-
 ## 🎨 Color Palette
 
 - **Primary**: Blue (#2563eb - primary-600)
