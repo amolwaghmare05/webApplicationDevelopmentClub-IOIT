@@ -6,4 +6,5 @@
   "github": {
     "silent": true
   }
+  "rootDirectory": "client"
 }
