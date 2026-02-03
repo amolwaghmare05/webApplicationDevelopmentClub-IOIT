@@ -79,7 +79,7 @@ const teamMembers = [
     category: 'media',
     bio: 'Creating stunning visuals and managing digital presence.',
     color: 'from-pink-500 to-rose-400',
-    image: null,
+    image: '/images/team/Prathmesh Dawkar.jpg',
   },
   
   // Documentation Team
@@ -90,7 +90,7 @@ const teamMembers = [
     category: 'documentation',
     bio: 'Ensuring comprehensive documentation and knowledge management.',
     color: 'from-amber-500 to-orange-400',
-    image: null,
+    image: '/images/team/Sandesh Shinde.jpg',
   },
   {
     id: 10,
