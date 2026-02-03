@@ -92,6 +92,15 @@ const teamMembers = [
     color: 'from-amber-500 to-orange-400',
     image: null,
   },
+  {
+    id: 10,
+    name: 'Niraj Shevade',
+    role: 'Joint Head - Documentation Team',
+    category: 'documentation',
+    bio: 'Maintaining records and creating technical documentation.',
+    color: 'from-orange-500 to-amber-400',
+    image: '/images/team/Niraj-Shevade.jpg',
+  },
 ];
 
 export default function TeamPage() {
