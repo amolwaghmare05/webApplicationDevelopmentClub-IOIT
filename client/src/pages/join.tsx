@@ -23,10 +23,10 @@ export default function JoinPage() {
     setIsSubmitting(true);
     
     try {
-      // EmailJS Configuration - Replace with your actual credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_JOIN_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      // EmailJS Configuration
+      const serviceId = 'service_ixgszfs';
+      const templateId = 'template_gjupefu';
+      const publicKey = 'RA-0v0dIP3b3MhmJ9';
 
       const templateParams = {
         from_name: formData.name,
