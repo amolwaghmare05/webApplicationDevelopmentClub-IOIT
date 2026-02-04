@@ -48,6 +48,17 @@ export default function JoinPage() {
       // Send auto-reply to user
       await emailjs.send(serviceId, autoReplyTemplateId, templateParams, publicKey);
       
+      // Save to Google Sheets
+      const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbzD4T_TF0-ZVFD6bxYgXNCXaLoZuKcF9cCzEUHU7RKGmL7uLigBYd0gVzlMKxIvW12Z/exec';
+      await fetch(googleSheetsUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(templateParams),
+      });
+      
       setIsSubmitted(true);
     } catch (error) {
       console.error('EmailJS Error:', error);
