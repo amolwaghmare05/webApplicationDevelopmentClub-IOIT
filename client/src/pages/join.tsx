@@ -51,20 +51,24 @@ export default function JoinPage() {
       // Save to Google Sheets
       const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbzD4T_TF0-ZVFD6bxYgXNCXaLoZuKcF9cCzEUHU7RKGmL7uLigBYd0gVzlMKxIvW12Z/exec';
       
-      // Create form data for Google Sheets
-      const formDataForSheets = new FormData();
-      formDataForSheets.append('user_name', formData.name);
-      formDataForSheets.append('user_email', formData.email);
-      formDataForSheets.append('phone', formData.phone);
-      formDataForSheets.append('branch', formData.branch);
-      formDataForSheets.append('year', formData.year);
-      formDataForSheets.append('division', formData.division);
-      formDataForSheets.append('linkedin', formData.linkedin || 'Not provided');
-      formDataForSheets.append('github', formData.github || 'Not provided');
+      // Create URL encoded data for Google Sheets
+      const sheetsData = new URLSearchParams();
+      sheetsData.append('user_name', formData.name);
+      sheetsData.append('user_email', formData.email);
+      sheetsData.append('phone', formData.phone);
+      sheetsData.append('branch', formData.branch);
+      sheetsData.append('year', formData.year);
+      sheetsData.append('division', formData.division);
+      sheetsData.append('linkedin', formData.linkedin || 'Not provided');
+      sheetsData.append('github', formData.github || 'Not provided');
       
       fetch(googleSheetsUrl, {
         method: 'POST',
-        body: formDataForSheets,
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: sheetsData.toString(),
       });
       
       setIsSubmitted(true);
