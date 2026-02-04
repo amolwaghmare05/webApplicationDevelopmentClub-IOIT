@@ -79,7 +79,7 @@ export default function Footer() {
               © {currentYear} Web Application Development Club. All rights reserved.
             </p>
             <p className="text-secondary-400">
-              Made by <span className="text-primary-400 font-medium">Pritam Rangari</span>
+              Made by <span className="text-primary-400 font-medium">Pritam Rangari</span> & <span className="text-primary-400 font-medium">Amol Waghmare</span>
             </p>
           </div>
         </div>
