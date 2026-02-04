@@ -29,8 +29,8 @@ export default function JoinPage() {
       const publicKey = 'RA-0v0dIP3b3MhmJ9';
 
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
+        user_name: formData.name,
+        user_email: formData.email,
         phone: formData.phone,
         branch: formData.branch,
         year: formData.year,
