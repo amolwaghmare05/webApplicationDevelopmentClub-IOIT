@@ -73,20 +73,12 @@ export default function GalleryPage() {
                 >
                   {/* Image */}
                   <div className="aspect-[4/3] bg-gradient-to-br from-primary-100 to-accent-100 relative overflow-hidden">
-                    {/* Placeholder gradient - replace with actual image when available */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-6xl font-bold text-primary-200">
-                        {image.title.charAt(0)}
-                      </span>
-                    </div>
-                    {/* Uncomment when you have actual images:
                     <Image
                       src={image.src}
                       alt={image.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    */}
                     
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center">
@@ -167,13 +159,6 @@ export default function GalleryPage() {
             className="max-w-5xl max-h-[80vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Placeholder - replace with actual image */}
-            <div className="aspect-video bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-8xl font-bold text-white/30">
-                {selectedImage.title.charAt(0)}
-              </span>
-            </div>
-            {/* Uncomment when you have actual images:
             <div className="relative aspect-video">
               <Image
                 src={selectedImage.src}
@@ -182,7 +167,6 @@ export default function GalleryPage() {
                 className="object-contain rounded-lg"
               />
             </div>
-            */}
             
             {/* Caption */}
             <div className="text-center mt-4">
