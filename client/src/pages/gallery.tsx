@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { X, ChevronLeft, ChevronRight, Calendar, ZoomIn } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { galleryImages, GalleryImage } from '@/data/galleryData';
 
 export default function GalleryPage() {
@@ -88,25 +88,12 @@ export default function GalleryPage() {
 
                   {/* Info */}
                   <div className="p-4">
-                    <span className="text-xs font-semibold text-primary-600 uppercase tracking-wider">
-                      {image.category || 'Project'}
-                    </span>
-                    <h3 className="font-semibold text-secondary-900 mt-1 line-clamp-1">
+                    <h3 className="font-semibold text-secondary-900 line-clamp-1">
                       {image.title}
                     </h3>
-                    <p className="text-sm text-secondary-600 mt-1 line-clamp-2">
+                    <p className="text-sm text-secondary-600 mt-2 line-clamp-2">
                       Team: {image.team.join(', ')}
                     </p>
-                    {image.date && (
-                      <div className="flex items-center gap-2 text-sm text-secondary-500 mt-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(image.date).toLocaleDateString('en-IN', { 
-                          day: 'numeric', 
-                          month: 'short', 
-                          year: 'numeric' 
-                        })}</span>
-                      </div>
-                    )}
                   </div>
                 </div>
               ))}
@@ -180,16 +167,6 @@ export default function GalleryPage() {
               </h3>
               <p className="text-white/70 mb-2">
                 Team: {selectedImage.team.join(', ')}
-              </p>
-              {selectedImage.description && (
-                <p className="text-white/60 mb-2">{selectedImage.description}</p>
-              )}
-              <p className="text-white/50 text-sm">
-                {selectedImage.category || 'Project'} {selectedImage.date && `• ${new Date(selectedImage.date).toLocaleDateString('en-IN', { 
-                  day: 'numeric', 
-                  month: 'long', 
-                  year: 'numeric' 
-                })}`}
               </p>
               <p className="text-white/40 text-sm mt-2">
                 {currentIndex + 1} of {filteredImages.length}
