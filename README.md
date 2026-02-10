@@ -4,7 +4,7 @@ A professional, high-performance website for the Web Application Development Clu
 
 ## 🚀 Live Demo
 
-- **Frontend**: [wad-club-ioit.vercel.app](https://wad-club-ioit.vercel.app)
+- **Frontend**:https://ioit-wad-club.vercel.app/
 
 ## ✨ Features
 
