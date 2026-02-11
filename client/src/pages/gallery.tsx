@@ -91,9 +91,11 @@ export default function GalleryPage() {
                     <h3 className="font-semibold text-secondary-900 line-clamp-1">
                       {image.title}
                     </h3>
-                    <p className="text-sm text-secondary-600 mt-2 line-clamp-2">
-                      Team: {image.team.join(', ')}
-                    </p>
+                    {image.team.length > 0 && (
+                      <p className="text-sm text-secondary-600 mt-2 line-clamp-2">
+                        Team: {image.team.join(', ')}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -165,9 +167,11 @@ export default function GalleryPage() {
               <h3 className="text-xl font-semibold text-white mb-2">
                 {selectedImage.title}
               </h3>
-              <p className="text-white/70 mb-2">
-                Team: {selectedImage.team.join(', ')}
-              </p>
+              {selectedImage.team.length > 0 && (
+                <p className="text-white/70 mb-2">
+                  Team: {selectedImage.team.join(', ')}
+                </p>
+              )}
               <p className="text-white/40 text-sm mt-2">
                 {currentIndex + 1} of {filteredImages.length}
               </p>
