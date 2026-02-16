@@ -79,7 +79,24 @@ export default function Footer() {
               © {currentYear} Web Application Development Club. All rights reserved.
             </p>
             <p className="text-secondary-400">
-              Made by <span className="text-primary-400 font-medium">Pritam Rangari</span> & <span className="text-primary-400 font-medium">Amol Waghmare</span>
+              Made by{' '}
+              <a 
+                href="https://www.linkedin.com/in/pritamrangari/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-400 font-medium hover:text-primary-300 hover:underline transition-colors"
+              >
+                Pritam Rangari
+              </a>
+              {' '}&{' '}
+              <a 
+                href="https://www.linkedin.com/in/amolwaghmare05/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-400 font-medium hover:text-primary-300 hover:underline transition-colors"
+              >
+                Amol Waghmare
+              </a>
             </p>
           </div>
         </div>

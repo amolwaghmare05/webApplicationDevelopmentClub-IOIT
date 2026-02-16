@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Globe } from 'lucide-react';
 
 const navLinks = [
@@ -35,15 +36,21 @@ export default function Navbar() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 -ml-24">
             <a 
               href="https://aissmsioit.org/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group"
             >
-              <div className="w-11 h-11 bg-primary-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all">
-                <Globe className="w-6 h-6 text-white" />
+              <div className="h-12 w-auto rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all overflow-hidden bg-white px-2">
+                <Image 
+                  src="/images/college-logo.jpeg" 
+                  alt="AISSMS IOIT Logo" 
+                  width={120} 
+                  height={48}
+                  className="object-contain h-full w-auto"
+                />
               </div>
             </a>
             <a 
